@@ -79,11 +79,7 @@ def explore_subgraph(subgraph, positions, depth):
 rows=create_nesting(maxrows, maxrowsize)
   
 #initialize
-for i in range(len(rows[0])):
-  if i == 0:
-    rows[0][i] = [-1, 0, 0]
-  else:
-    rows[0][i] = [1, 0, 1]
+rows[0][0] = [-1, 0, 0]
 
 #fill out dynamic programming array
 for i in range(maxrows):
